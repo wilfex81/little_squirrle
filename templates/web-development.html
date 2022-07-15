@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 
@@ -16,19 +17,19 @@
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
-    <link rel="manifest" href="assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static '/img/favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static '/img/favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static '/img/favicons/favicon-16x16.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/img/favicons/favicon.ico' %}">
+    <link rel="manifest" href="{% static '/img/favicons/manifest.json' %}">
+    <meta name="msapplication-TileImage" content="{% static '/img/favicons/mstile-150x150.png' %}">
     <meta name="theme-color" content="#ffffff">
 
 
     <!-- ===============================================-->
     <!--    Stylesheets-->
     <!-- ===============================================-->
-    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="{% static '/css/theme.css' %}" rel="stylesheet" />
 
   </head>
 
@@ -71,14 +72,14 @@
 
 
       <nav class="navbar navbar-expand-lg navbar-light sticky-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/gallery/logo-n.png" height="45" alt="logo" /></a>
+        <div class="container"><a class="navbar-brand" href="{% url 'app:index' %}"><img src="{% static '/img/gallery/logo-n.png' %}" height="45" alt="logo" /></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
-              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="pricing.html">Pricing</a></li>
-              <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="web-development.html">Web Development</a></li>
-              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">User Research</a></li>
+              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="{% url 'app:index' %}">Home</a></li>
+              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="{% url 'app:pricing' %}">Pricing</a></li>
+              <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="{% url 'app:web_development' %}">Web Development</a></li>
+              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="{% url 'app:user_research' %}">User Research</a></li>
             </ul><a class="btn btn-primary order-1 order-lg-0" href="#!">Sign Up</a>
             <form class="d-flex my-3 d-block d-lg-none">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
@@ -160,105 +161,105 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/design.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/design.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">User Research for User Experience Design</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">The Museum of Modern Art</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/psychology.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/psychology.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">Buddhism and Modern Psychology</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">The Museum of Modern Art</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/philosophy.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/philosophy.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">Introduction to Philosophy</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">Duke University</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/photographs.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/photographs.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">Advance on Seeing Through Photographs</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">Duke University</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/arguments.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/arguments.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">Think Again I: How to Understand Arguments</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">The Museum of Modern Art</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/experience-design.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/experience-design.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">User Research for User Experience Design</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">The Museum of Modern Art</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/user-design.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/user-design.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">User Research for User Experience Design</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">The Museum of Modern Art</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/critical-thinking.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/critical-thinking.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">Introduction to Logic and Critical Thinking</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">Duke University</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/art-design.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/art-design.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">Modern and Contemporary Art and Design</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">The Museum of Modern Art</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/user-research.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/user-research.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">Modern and Contemporary Art and Design</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">The Museum of Modern Art</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/photographs.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/photographs.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">Advance on Seeing Through Photographs</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">Duke University</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/ux.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/ux.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">Modern and Contemporary Art and Design</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">The Museum of Modern Art</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/design.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/design.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">User Research for User Experience Design</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">The Museum of Modern Art</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/critical-thinking.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/critical-thinking.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">Introduction to Logic and Critical Thinking</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">Duke University</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4 mb-4">
-              <div class="card h-100"><img class="card-img-top w-100" src="assets/img/gallery/art-design-1.png" alt="courses" />
+              <div class="card h-100"><img class="card-img-top w-100" src="{% static '/img/gallery/art-design-1.png' %}" alt="courses" />
                 <div class="card-body">
                   <h5 class="font-sans-serif fw-bold fs-md-0 fs-lg-1">Modern and Contemporary Art and Design</h5><a class="text-muted fs--1 stretched-link text-decoration-none" href="#!">The Museum of Modern Art</a>
                 </div>
@@ -281,7 +282,7 @@
 
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-md-6 col-lg-4 mb-5"><img src="assets/img/gallery/cta.png" width="280" alt="cta" /></div>
+            <div class="col-md-6 col-lg-4 mb-5"><img src="{% static '/img/gallery/cta.png' %}" width="280" alt="cta" /></div>
             <div class="col-md-6 col-lg-5">
               <h5 class="text-primary font-sans-serif fw-bold">Subscrible now</h5>
               <h1 class="mb-5">Get every single<br />update you will get</h1>
@@ -313,7 +314,7 @@
 
         <div class="container">
           <div class="row">
-            <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img src="assets/img/gallery/footer-logo.png" height="51" alt="" /></a>
+            <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img src="{% static '/img/gallery/footer-logo.png' %}" height="51" alt="" /></a>
               <p class="text-light my-4"> <i class="fas fa-map-marker-alt me-3"></i><span class="text-light">1500 Treat Ave, Suite 200  &nbsp;</span><a class="text-light" href="tel:+604-680-9785">+604-680-9785</a><br />San Francisco, CA 94110</p>
               <p class="text-light"> <i class="fas fa-envelope me-3"> </i><a class="text-light" href="mailto:vctung@outlook.com">vctung@outlook.com </a></p>
               <p class="text-light"> <i class="fas fa-phone-alt me-3"></i><a class="text-light" href="tel:1-800-800-2299">1-800-800-2299 (Support)</a></p>
